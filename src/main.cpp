@@ -14,14 +14,12 @@ void printArray(vector<int>& arr) {
 
 int main()
 {
-    std::cout << "Helloooooooo 1" << std::endl;
     PluginLoader* loader = PluginLoader::instance();
-    std::cout << "Helloooooooo 2" << std::endl;
     vector<int> arr {5, 7, 1, 3, 8, 10, 11, 2};
 
     cout << "Starting with this array:\n";
     printArray(arr);
-    cout << "Starting sort operation now..\n";
+    cout << "Starting sort operations now..\n";
     vector<int> ans;
     for (SortVersePlugin* plugin : PluginLoader::instance()->getPlugins()) {
         ans = plugin->sort(arr);

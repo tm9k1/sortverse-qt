@@ -9,7 +9,6 @@
 class SortVersePlugin {
 
 public:
-    SortVersePlugin();
     virtual std::vector<int> sort(const std::vector<int>&);
 };
 

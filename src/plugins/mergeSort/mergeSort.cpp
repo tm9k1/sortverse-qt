@@ -2,7 +2,6 @@
 #include <iostream>
 
 extern "C" SortVersePlugin* instance() {
-    std::cout << "instance from mergeSort DLL called!" << std::endl;
     return new MergeSort();
 }
 
@@ -44,6 +43,6 @@ std::vector<int> MergeSort::mergeSort(const std::vector<int>& arr, int startInde
 }
 
 std::vector<int> MergeSort::sort(const std::vector<int>& arr) {
-    std::cout << "Welcome to sorter!\n";
+    std::cout << "Welcome to Merge Sort!\n";
     return mergeSort(arr, 0, arr.size());
 }
