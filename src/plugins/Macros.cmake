@@ -9,6 +9,7 @@ function(add_plugin plugin)
   add_library(${plugin} MODULE ${PLUGIN_SOURCES})
   target_include_directories(${plugin} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
   set_target_properties(${plugin} PROPERTIES
+  target_link_libraries(${plugin} STATIC sortverse-core)
   LIBRARY_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/plugins")
 
 endfunction(add_plugin)

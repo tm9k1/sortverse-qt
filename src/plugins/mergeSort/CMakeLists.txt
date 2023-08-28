@@ -1,4 +1,4 @@
-add_plugin(mergeSort SOURCES mergeSort.cpp) # TODO: make a Macros.cmake
+add_plugin(mergeSort SOURCES mergeSort.cpp mergeSort.h) # TODO: make a Macros.cmake
 
 # target_link_libraries(
     # mergeSort
