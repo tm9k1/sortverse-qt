@@ -22,18 +22,18 @@ std::vector<int> MergeSort::merge(const std::vector<int>& arr1, const std::vecto
     while((j < arr2.size())) {
         mergedArray[idx++] = arr2[j++];
     }
-
     return mergedArray;
 }
 
-std::vector<int> MergeSort::mergeSort(const std::vector<int>& arr, int startIndex, int length) {
+std::vector<int> MergeSort::mergeSort(const std::vector<int>& arr, int startIndex, int endIndex) {
+    int length = endIndex - startIndex;
     if (length < 2) {
         if(length == 0) {
             return {};
         }
         return {arr[startIndex]};
     }
-    return merge(mergeSort(arr, startIndex, length/2), mergeSort(arr, startIndex + length/2, length/2));
+    return merge(mergeSort(arr, startIndex, startIndex + length/2), mergeSort(arr, startIndex + length/2, endIndex));
 }
 
 std::vector<int> MergeSort::sort(const std::vector<int>& arr) {
