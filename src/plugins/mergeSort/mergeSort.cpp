@@ -31,13 +31,7 @@ std::vector<int> MergeSort::mergeSort(const std::vector<int>& arr, int startInde
         if(length == 0) {
             return {};
         }
-        std::vector<int> ret(length);
-        int i=0;
-        while(i < length) {
-            ret[i] = arr[startIndex+i];
-            i++;
-        }
-        return ret;
+        return {arr[startIndex]};
     }
     return merge(mergeSort(arr, startIndex, length/2), mergeSort(arr, startIndex + length/2, length/2));
 }
