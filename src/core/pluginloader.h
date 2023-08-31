@@ -1,6 +1,6 @@
 #ifndef PLUGINLOADER_H
 #define PLUGINLOADER_H
-#include<vector>
+#include <vector>
 #include "sortverseplugin.h"
 
 typedef std::vector<int>(*sort_signature)(const std::vector<int>&);

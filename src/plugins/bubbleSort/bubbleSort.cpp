@@ -1,5 +1,6 @@
-#include <bubbleSort.h>
 #include <iostream>
+
+#include "bubbleSort.h"
 
 extern "C" SortVersePlugin* instance() {
     return new BubbleSort();

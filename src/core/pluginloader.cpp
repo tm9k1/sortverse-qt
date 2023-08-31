@@ -3,6 +3,7 @@
 #include <filesystem>
 
 #include "pluginloader.h"
+#include "util.h"
 
 namespace fs = std::filesystem;
 
@@ -15,7 +16,7 @@ PluginLoader::PluginLoader()
 {
     void *handle;
     char *error;
-    std::string path = "../lib/plugins";
+    std::string path = Util::instance()->appDirPath() + (std::string)"../lib/plugins";
     for (const auto & entry : fs::directory_iterator(path)) {
         // TODO: make it load plugins with OS-specific extension only (.dll vs .so)
         handle = dlopen(entry.path().c_str(), RTLD_LAZY);
